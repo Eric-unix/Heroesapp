@@ -6,7 +6,6 @@ import { useParams, Navigate, useNavigate } from "react-router-dom"
 
 export const HeroScreen = () => {
     const { heroeId } = useParams();
-
     const navigate = useNavigate();
     const hero = useMemo( () => getHeroById(heroeId), [heroeId]);
     const handleReturn = () => {
@@ -35,7 +34,7 @@ export const HeroScreen = () => {
           <img 
              src={ imgPath }
              alt={ superhero }
-             className="img-thumbnail"
+             className="img-thumbnail animate__animated animate__backInLeft"
           />
         </div>
 
